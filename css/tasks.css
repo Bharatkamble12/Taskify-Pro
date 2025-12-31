@@ -1,0 +1,217 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #020617;
+  color: #fff;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  position: fixed;
+  inset: 0 auto 0 0;
+  background: #0b1220;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo h2 {
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.nav-item a {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #cbd5f5;
+}
+
+.nav-item.active a,
+.nav-item a:hover {
+  background: #1e293b;
+  color: #fff;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: #667eea;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #cbd5f5;
+  cursor: pointer;
+}
+
+/* ===== MAIN ===== */
+.main-content {
+  margin-left: 260px;
+  padding: 24px;
+}
+
+/* ===== HEADER ===== */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+/* ===== FILTERS ===== */
+.filters-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.search-input,
+.filter-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== KANBAN ===== */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.kanban-column {
+  background: #0b1220;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.kanban-column h3 {
+  margin-bottom: 12px;
+}
+
+.kanban-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== TASK CARD (JS INSERTED) ===== */
+.task-card {
+  background: #111827;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.task-card.overdue {
+  border-left: 4px solid #ef4444;
+  box-shadow: 0 6px 18px rgba(239,68,68,0.06);
+}
+
+.task-due {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #fca5a5;
+}
+
+.task-title {
+  font-weight: 600;
+}
+
+.task-meta {
+  font-size: 12px;
+  color: #94a3b8;
+}
+/* end task-meta */
+
+/* ===== TASK ACTION BUTTONS ===== */
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.task-card .btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.task-card .btn-sm {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.task-card .btn-primary {
+  background: linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.task-card .btn-danger {
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+.task-card .btn-success {
+  background: linear-gradient(135deg,#10b981,#059669);
+}
+
+.task-card .btn:focus {
+  outline: 2px solid rgba(255,255,255,0.08);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+  }
+}

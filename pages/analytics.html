@@ -1,0 +1,155 @@
+<!-- pages/analytics.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Analytics - Taskify Pro</title>
+	<link rel="stylesheet" href="../css/dashboard.css">
+	<link rel="stylesheet" href="../css/analytics.css">
+	<link rel="stylesheet" href="../css/desktop-required.css">
+	<link rel="shortcut icon" href="../assets/logos/logo.png" type="image/x-icon">
+</head>
+
+<body class="dashboard">
+	<script src="../js/desktop-only.js"></script>
+	<aside class="sidebar">
+		<div class="sidebar-header">
+			<div class="logo">
+				<h2>Taskify Pro</h2>
+			</div>
+		</div>
+
+		<nav class="sidebar-nav">
+			<ul>
+				<li class="nav-item">
+					<a href="dashboard.html">
+						<span class="nav-icon">📊</span>
+						Dashboard
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="tasks.html">
+						<span class="nav-icon">📋</span>
+						My Tasks
+					</a>
+				</li>
+
+				<li class="nav-item active">
+					<a href="analytics.html">
+						<span class="nav-icon">📈</span>
+						Analytics
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="settings.html">
+						<span class="nav-icon">⚙️</span>
+						Settings
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="sidebar-footer">
+			<div class="user-info">
+				<div class="user-avatar">B</div>
+				<div class="user-details">
+					<span class="user-name">bharat amol kamble</span>
+					<span class="user-email">bharatkamble7652@gmail.com</span>
+				</div>
+			</div>
+
+			<button class="logout-btn">
+				🚪 Logout
+			</button>
+		</div>
+	</aside>
+
+	<main class="main-content">
+		<header class="topbar">
+			<div class="topbar-left">
+				<h1 class="page-title">Analytics</h1>
+			</div>
+		</header>
+
+		<!-- Section 1: Overview Stats -->
+		<section class="overview-stats">
+			<div class="stats-grid">
+				<div class="stat-card stat-overview">
+					<div class="stat-label">Total Tasks</div>
+					<div class="stat-number" id="statTotal">0</div>
+				</div>
+				<div class="stat-card stat-overview">
+					<div class="stat-label">Completed Tasks</div>
+					<div class="stat-number" id="statCompleted">0</div>
+				</div>
+				<div class="stat-card stat-overview">
+					<div class="stat-label">Pending Tasks</div>
+					<div class="stat-number" id="statPending">0</div>
+				</div>
+				<div class="stat-card stat-overview">
+					<div class="stat-label">Completion Rate</div>
+					<div class="stat-number" id="statRate">0%</div>
+				</div>
+				<div class="stat-card stat-overview">
+					<div class="stat-label">Overdue Tasks</div>
+					<div class="stat-number" id="statOverdue">0</div>
+				</div>
+				<div class="stat-card stat-overview">
+					<div class="stat-label">Overdue %</div>
+					<div class="stat-number" id="statOverdueRate">0%</div>
+				</div>
+			</div>
+		</section>
+
+		
+
+		<!-- Sections 2 : Charts -->
+		<section class="analytics-main">
+			<div class="charts-grid">
+				<div class="chart-card chart-donut">
+					<h3>Task Status Distribution</h3>
+					<canvas id="statusDonut" aria-label="Task status distribution" role="img"></canvas>
+				</div>
+
+				<div class="chart-card chart-line">
+					<h3>Productivity Over Time</h3>
+					<canvas id="productivityLine" aria-label="Tasks completed over time" role="img"></canvas>
+				</div>
+
+				<div class="chart-card chart-bar">
+					<h3>On-time vs Overdue</h3>
+					<canvas id="overdueBar" aria-label="On-time vs overdue tasks" role="img"></canvas>
+				</div>
+
+				<div class="chart-card chart-bar">
+					<h3>Tasks by Priority</h3>
+					<canvas id="priorityBar" aria-label="Tasks by priority level" role="img"></canvas>
+				</div>
+
+				<div class="chart-card heatmap-card">
+					<h3>Weekly Completion Heatmap</h3>
+					<div id="weeklyHeatmap" class="heatmap-grid"></div>
+				</div>
+			</div>
+		</section>
+		<!-- Section 3: Recent Activity Timeline -->
+		<section class="recent-activity">
+			<h2>Recent Activity Timeline</h2>
+			<div class="activity-list" id="activityList">
+				<!-- Activity items will be populated here -->
+			</div>
+		</section>
+
+	</main>
+	<script src="../js/desktop-only.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="../js/tasks-store.js"></script>
+	<script src="../js/analytics.js"></script>
+</body>
+
+</html>

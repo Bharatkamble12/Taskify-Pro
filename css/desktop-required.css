@@ -1,0 +1,63 @@
+/* desktop-required.css
+   Styles for the full-screen 'Desktop Experience Required' message
+*/
+:root {
+  --card-bg: #ffffff;
+  --overlay-bg: rgba(255,255,255,0.98);
+  --muted: #6b7280;
+  --accent: #0f172a;
+}
+
+html, body {
+  height: 100%;
+}
+
+body[data-desktop-blocked] > *:not(.desktop-required-overlay) {
+  display: none !important;
+}
+
+.desktop-required-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--overlay-bg);
+  z-index: 99999;
+  padding: 24px;
+}
+
+.desktop-required-card {
+  max-width: 520px;
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.12);
+  padding: 28px;
+  text-align: center;
+  color: var(--accent);
+}
+
+.desktop-required-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.desktop-required-card p {
+  margin: 8px 0 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.desktop-required-card .muted {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #9aa0a6;
+}
+
+@media (max-width: 420px) {
+  .desktop-required-card { padding: 20px; border-radius: 8px; }
+  .desktop-required-card h2 { font-size: 18px; }
+  .desktop-required-card p { font-size: 14px; }
+}

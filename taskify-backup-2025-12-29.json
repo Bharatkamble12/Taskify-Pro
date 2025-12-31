@@ -1,0 +1,197 @@
+{
+  "currentUser": {
+    "id": 1767000000000,
+    "fullName": "bharat amol kamble",
+    "email": "bharatkamble7652@gmail.com"
+  },
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Complete Taskify UI",
+      "description": "Finish dashboard, tasks and analytics UI",
+      "priority": "high",
+      "dueDate": "2025-01-05",
+      "status": "in-progress",
+      "createdAt": "2025-01-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Fix sidebar bugs",
+      "description": "Resolve overlapping and responsive issues",
+      "priority": "medium",
+      "dueDate": "2025-01-03",
+      "status": "completed",
+      "createdAt": "2024-12-30T09:20:00Z"
+    },
+    {
+      "id": "3",
+      "title": "Implement task store",
+      "description": "Centralized localStorage store",
+      "priority": "high",
+      "dueDate": "2025-01-02",
+      "status": "completed",
+      "createdAt": "2024-12-29T15:00:00Z"
+    },
+    {
+      "id": "4",
+      "title": "Design landing page",
+      "description": "Hero, preview, CTA sections",
+      "priority": "medium",
+      "dueDate": "2025-01-10",
+      "status": "todo",
+      "createdAt": "2025-01-02T08:30:00Z"
+    },
+    {
+      "id": "5",
+      "title": "Create analytics charts",
+      "description": "Donut & line chart using Chart.js",
+      "priority": "high",
+      "dueDate": "2025-01-04",
+      "status": "in-progress",
+      "createdAt": "2025-01-01T18:45:00Z"
+    },
+    {
+      "id": "6",
+      "title": "Add task filters",
+      "description": "Search, status & priority filters",
+      "priority": "medium",
+      "dueDate": "2025-01-06",
+      "status": "completed",
+      "createdAt": "2025-01-01T11:00:00Z"
+    },
+    {
+      "id": "7",
+      "title": "Implement logout flow",
+      "description": "Clear user & redirect to login",
+      "priority": "low",
+      "dueDate": "2024-12-31",
+      "status": "completed",
+      "createdAt": "2024-12-28T16:20:00Z"
+    },
+    {
+      "id": "8",
+      "title": "Add overdue UI highlight",
+      "description": "Red border for overdue tasks",
+      "priority": "medium",
+      "dueDate": "2024-12-28",
+      "status": "todo",
+      "createdAt": "2024-12-27T09:10:00Z"
+    },
+    {
+      "id": "9",
+      "title": "Build settings page",
+      "description": "Theme, notifications, data management",
+      "priority": "high",
+      "dueDate": "2025-01-07",
+      "status": "in-progress",
+      "createdAt": "2025-01-02T12:00:00Z"
+    },
+    {
+      "id": "10",
+      "title": "Test import/export",
+      "description": "Verify JSON backup & restore",
+      "priority": "medium",
+      "dueDate": "2025-01-08",
+      "status": "todo",
+      "createdAt": "2025-01-03T09:00:00Z"
+    },
+
+    {
+      "id": "11",
+      "title": "Prepare README",
+      "description": "Project documentation",
+      "priority": "low",
+      "dueDate": "2025-01-12",
+      "status": "todo",
+      "createdAt": "2025-01-03T14:00:00Z"
+    },
+    {
+      "id": "12",
+      "title": "Optimize CSS",
+      "description": "Remove duplicates and refactor",
+      "priority": "medium",
+      "dueDate": "2025-01-09",
+      "status": "in-progress",
+      "createdAt": "2025-01-03T16:30:00Z"
+    },
+    {
+      "id": "13",
+      "title": "Add router.js",
+      "description": "Client-side navigation logic",
+      "priority": "high",
+      "dueDate": "2025-01-11",
+      "status": "todo",
+      "createdAt": "2025-01-04T10:15:00Z"
+    },
+    {
+      "id": "14",
+      "title": "Improve empty states",
+      "description": "Better UX when no tasks",
+      "priority": "low",
+      "dueDate": "2025-01-13",
+      "status": "todo",
+      "createdAt": "2025-01-04T11:45:00Z"
+    },
+    {
+      "id": "15",
+      "title": "Add toast notifications",
+      "description": "Success & error feedback",
+      "priority": "medium",
+      "dueDate": "2025-01-14",
+      "status": "todo",
+      "createdAt": "2025-01-04T13:20:00Z"
+    },
+    {
+      "id": "16",
+      "title": "Dark mode support",
+      "description": "Theme toggle logic",
+      "priority": "high",
+      "dueDate": "2025-01-15",
+      "status": "todo",
+      "createdAt": "2025-01-04T15:10:00Z"
+    },
+    {
+      "id": "17",
+      "title": "Mobile responsiveness",
+      "description": "Sidebar & kanban layout",
+      "priority": "high",
+      "dueDate": "2025-01-16",
+      "status": "todo",
+      "createdAt": "2025-01-04T16:40:00Z"
+    },
+    {
+      "id": "18",
+      "title": "Performance testing",
+      "description": "Test with large task lists",
+      "priority": "medium",
+      "dueDate": "2025-01-17",
+      "status": "todo",
+      "createdAt": "2025-01-04T18:00:00Z"
+    },
+    {
+      "id": "19",
+      "title": "Final UI polish",
+      "description": "Spacing, shadows, typography",
+      "priority": "low",
+      "dueDate": "2025-01-18",
+      "status": "todo",
+      "createdAt": "2025-01-04T19:30:00Z"
+    },
+    {
+      "id": "20",
+      "title": "Deploy Taskify Pro",
+      "description": "Deploy to Netlify or Vercel",
+      "priority": "high",
+      "dueDate": "2025-01-20",
+      "status": "todo",
+      "createdAt": "2025-01-04T20:45:00Z"
+    }
+  ],
+  "settings": {
+    "reminders": true,
+    "dueAlerts": true,
+    "emailNotifications": false,
+    "theme": "dark"
+  },
+  "exportDate": "2025-01-05T10:00:00Z"
+}

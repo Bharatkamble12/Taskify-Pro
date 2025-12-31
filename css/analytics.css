@@ -1,0 +1,209 @@
+/* Charts UI styles and sidebar tweaks for analytics page */
+
+.analytics-main {
+	padding: 16px 0;
+}
+
+/* ===== LAYOUT FIXES (see STEP 4 recommendations) ===== */
+.main-content {
+	margin-left: 260px;
+	padding: 24px;
+	width: calc(100% - 260px);
+	min-height: 100vh;
+}
+
+.charts-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 16px;
+}
+
+.chart-card {
+	background:#0b1220;
+	padding:20px;
+	border-radius:12px;
+	min-height:320px;
+	border:1px solid rgba(255,255,255,0.04);
+	width: 100%;
+	overflow: hidden;
+}
+
+.chart-card h3 { margin:0 0 12px 0; font-size:1.05rem; }
+
+/* make canvases fill the card area nicely */
+.chart-card canvas { width:100% !important; height:260px !important; display:block; }
+
+/* Heatmap styles */
+.heatmap-grid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 4px;
+	margin-top: 16px;
+}
+
+.heatmap-day {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 8px;
+	border-radius: 6px;
+	font-size: 12px;
+	font-weight: 500;
+	min-height: 50px;
+	justify-content: center;
+	text-align: center;
+	color: #cbd5f5;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.heatmap-day .day-label {
+	font-size: 10px;
+	margin-bottom: 4px;
+	opacity: 0.7;
+}
+
+.heatmap-day .count {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+/* Color intensity classes */
+.intensity-0 { background: rgba(255, 255, 255, 0.05); }
+.intensity-1 { background: rgba(34, 197, 94, 0.2); }
+.intensity-2 { background: rgba(34, 197, 94, 0.4); }
+.intensity-3 { background: rgba(34, 197, 94, 0.6); }
+.intensity-4 { background: rgba(34, 197, 94, 0.8); }
+.intensity-5 { background: rgba(34, 197, 94, 1); }
+
+/* Sidebar logo sizing */
+
+/* ===== SIDEBAR ===== */
+/* 1️⃣ Sidebar container */
+.sidebar {
+	width: 260px;
+	position: fixed;
+	inset: 0 auto 0 0;
+	background: #0b1220;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 2️⃣ Logo inside sidebar */
+.logo h2 {
+	background: linear-gradient(135deg,#667eea,#764ba2);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+/* 3️⃣ Sidebar navigation list */
+.sidebar-nav ul {
+	list-style: none;
+	margin-top: 20px;
+}
+
+.nav-item a {
+	display: flex;
+	gap: 10px;
+	padding: 10px;
+	border-radius: 8px;
+	text-decoration: none;
+	color: #cbd5f5;
+}
+
+.nav-item.active a,
+.nav-item a:hover {
+	background: #1e293b;
+	color: #fff;
+}
+
+/* 4️⃣ Sidebar footer (user + logout) */
+.sidebar-footer {
+	margin-top: auto;
+}
+
+.user-info {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+
+.user-avatar {
+	width: 40px;
+	height: 40px;
+	background: #667eea;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+}
+
+.logout-btn {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	background: transparent;
+	color: #cbd5f5;
+	cursor: pointer;
+}
+
+/* 5️⃣ Responsive sidebar behavior */
+@media (max-width: 900px) {
+	.sidebar {
+		position: relative;
+		width: 100%;
+	}
+}
+
+/* ===== RECENT ACTIVITY ===== */
+.recent-activity {
+	padding: 16px 0;
+}
+
+.recent-activity h2 {
+	margin: 0 0 16px 0;
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.activity-list {
+	max-height: 400px;
+	overflow-y: auto;
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.02);
+	padding: 16px;
+}
+
+.activity-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.activity-item:last-child {
+	border-bottom: none;
+}
+
+.activity-icon {
+	font-size: 1.2rem;
+	min-width: 24px;
+	text-align: center;
+}
+
+.activity-content {
+	flex: 1;
+}
+
+.activity-text {
+	font-size: 0.9rem;
+	color: #cbd5f5;
+	margin-bottom: 2px;
+}
+
+.activity-time {
+	font-size: 0.75rem;
+	color: #64748b;
+	opacity: 0.8;
+}
+

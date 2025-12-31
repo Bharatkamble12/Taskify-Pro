@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Taskify Pro</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/desktop-required.css">
+    <link rel="shortcut icon" href="../assets/logos/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <h2>Taskify Pro</h2>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="dashboard.html">
+                        <span class="nav-icon">📊</span>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html">
+                        <span class="nav-icon">📋</span>
+                        My Tasks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="analytics.html">
+                        <span class="nav-icon">📈</span>
+                        Analytics
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="settings.html">
+                        <span class="nav-icon">⚙️</span>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <span id="userAvatar">👤</span>
+                </div>
+                <div class="user-details">
+                    <div class="user-name" id="userName">User</div>
+                    <div class="user-email" id="userEmail">user@example.com</div>
+                </div>
+            </div>
+            <button class="logout-btn" id="logoutBtn">
+                <span>🚪</span>
+                Logout
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1 class="page-title">Settings</h1>
+        </header>
+
+        <!-- Settings Sections -->
+        <div class="settings-container">
+            <!-- Profile Settings -->
+            <section class="settings-section">
+                <h2 class="section-title">Profile</h2>
+                <div class="settings-group">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <button class="btn btn-primary" id="saveProfileBtn">Save Profile</button>
+                </div>
+            </section>
+
+            <!-- Notifications Settings -->
+            <section class="settings-section">
+                <h2 class="section-title">Notifications</h2>
+                <div class="settings-group">
+                    <div class="setting-item">
+                        <label class="toggle-label">
+                            <input type="checkbox" id="taskReminders">
+                            <span class="toggle-slider"></span>
+                            Task Reminders
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="toggle-label">
+                            <input type="checkbox" id="dueDateAlerts">
+                            <span class="toggle-slider"></span>
+                            Due Date Alerts
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label class="toggle-label">
+                            <input type="checkbox" id="emailNotifications">
+                            <span class="toggle-slider"></span>
+                            Email Notifications
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Data Management -->
+            <section class="settings-section">
+                <h2 class="section-title">Data Management</h2>
+                <div class="settings-group">
+                    <button class="btn btn-secondary" id="exportDataBtn">Export Data</button>
+                    <button class="btn btn-secondary" id="importDataBtn">Import Data</button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;">
+                    <button class="btn btn-danger" id="clearAllDataBtn">Clear All Data</button>
+                </div>
+            </section>
+        </div>
+    </main>
+<script src="../js/desktop-only.js"></script>
+
+    <script src="../js/settings.js"></script>
+</body>
+</html>

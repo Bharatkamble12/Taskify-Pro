@@ -1,0 +1,140 @@
+<!-- tasks.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks - Taskify Pro</title>
+    <link rel="stylesheet" href="../css/res.css">
+    <link rel="stylesheet" href="../css/tasks.css">
+    <link rel="stylesheet" href="../css/desktop-required.css">
+     <link rel="shortcut icon" href="../assets/logos/logo.png" type="image/x-icon">
+</head>
+<body>
+    <script src="../js/desktop-only.js"></script>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <h2>Taskify Pro</h2>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="dashboard.html">
+                        <span class="nav-icon">📊</span>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="tasks.html">
+                        <span class="nav-icon">📋</span>
+                        My Tasks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="analytics.html">
+                        <span class="nav-icon">📈</span>
+                        Analytics
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html">
+                        <span class="nav-icon">⚙️</span>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <span id="userAvatar">👤</span>
+                </div>
+                <div class="user-details">
+                    <div class="user-name" id="userName">User</div>
+                    <div class="user-email" id="userEmail">user@example.com</div>
+                </div>
+            </div>
+            <button class="logout-btn" id="logoutBtn">
+                <span>🚪</span>
+                Logout
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="tasks-page">
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1 class="page-title">My Tasks</h1>
+        </header>
+
+        <!-- Filters Row -->
+        <div class="filters-row">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search tasks...">
+            </div>
+            <div class="filter-container">
+                <select class="filter-select" id="status-filter">
+                    <option value="all">All Status</option>
+                    <option value="todo">To Do</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <select class="filter-select" id="priority-filter">
+                    <option value="all">All Priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Kanban Board -->
+        <div class="kanban-board">
+            <!-- To Do Column -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h2 class="column-title">To Do</h2>
+                    <span class="task-count" id="todo-count">0</span>
+                </div>
+                <div class="column-content" id="todo-column">
+                    <!-- Tasks will be rendered here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- In Progress Column -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h2 class="column-title">In Progress</h2>
+                    <span class="task-count" id="in-progress-count">0</span>
+                </div>
+                <div class="column-content" id="in-progress-column">
+                    <!-- Tasks will be rendered here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Completed Column -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h2 class="column-title">Completed</h2>
+                    <span class="task-count" id="completed-count">0</span>
+                </div>
+                <div class="column-content" id="completed-column">
+                    <!-- Tasks will be rendered here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/desktop-only.js"></script>
+
+    <script src="../js/tasks-store.js"></script>
+    <script src="../js/task.js"></script>
+    
+</body>
+</html>
